@@ -21,4 +21,5 @@ Se a conexão falhar durante o envio do cadastro, o frontend armazena temporaria
 - O fallback com cache local evita perder dados de cadastro quando a conexão oscila.
 
 ## Diagrama de Sequência
+
 O diagrama de sequência está disponível em [../diagramas/0003-register-barbershop.puml](../diagramas/0003-register-barbershop.puml).

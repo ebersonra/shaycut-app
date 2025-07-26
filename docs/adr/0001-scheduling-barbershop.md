@@ -21,4 +21,5 @@ Caso o dispositivo do usuário perca a conexão após a seleção de horário, o
 - O uso de cache local minimiza perda de dados em conexões instáveis.
 
 ## Diagrama de Sequência
+
 O diagrama de sequência está disponível em [../diagramas/0001-scheduling-barbershop.puml](../diagramas/0001-scheduling-barbershop.puml).

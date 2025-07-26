@@ -21,4 +21,5 @@ Se a conexão falhar após o usuário escolher o horário, a aplicação salvar�
 - A estratégia de cache local reduz falhas de agendamento causadas por instabilidades de rede.
 
 ## Diagrama de Sequência
+
 O diagrama de sequência está disponível em [../diagramas/0002-scheduling-autonomous-barber.puml](../diagramas/0002-scheduling-autonomous-barber.puml).
