@@ -21,19 +21,5 @@ Se a conexão falhar após o usuário escolher o horário, a aplicação salvar�
 - A estratégia de cache local reduz falhas de agendamento causadas por instabilidades de rede.
 
 ## Diagrama de Sequência
-```mermaid
-sequenceDiagram
-    actor Cliente
-    participant Frontend
-    participant Backend
-    participant DB as Supabase
-    Cliente->>Frontend: escolhe barbeiro e horário
-    Frontend->>Backend: solicita agendamento
-    Backend->>DB: grava agendamento autônomo
-    DB-->>Backend: confirma gravação
-    Backend-->>Frontend: confirmação ao cliente
-    Frontend-->>Cliente: exibe confirmação
-    note over Frontend: se offline
-        salva no cache local
-        e reenvia quando online
-```
+
+O diagrama de sequência está disponível em [../diagramas/0002-scheduling-autonomous-barber.puml](../diagramas/0002-scheduling-autonomous-barber.puml).

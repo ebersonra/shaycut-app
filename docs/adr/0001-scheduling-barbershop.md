@@ -21,19 +21,5 @@ Caso o dispositivo do usuário perca a conexão após a seleção de horário, o
 - O uso de cache local minimiza perda de dados em conexões instáveis.
 
 ## Diagrama de Sequência
-```mermaid
-sequenceDiagram
-    actor Cliente
-    participant Frontend
-    participant Backend
-    participant DB as Supabase
-    Cliente->>Frontend: seleciona barbearia e horário
-    Frontend->>Backend: solicita agendamento
-    Backend->>DB: grava agendamento
-    DB-->>Backend: confirma gravação
-    Backend-->>Frontend: confirmação ao cliente
-    Frontend-->>Cliente: exibe confirmação
-    note over Frontend: se offline
-        salva no cache local
-        e reenvia quando online
-```
+
+O diagrama de sequência está disponível em [../diagramas/0001-scheduling-barbershop.puml](../diagramas/0001-scheduling-barbershop.puml).

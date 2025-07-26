@@ -1,0 +1,17 @@
+@startuml
+actor Proprietário
+participant Frontend
+participant Backend
+database DB as "Supabase"
+Proprietário ->> Frontend: preenche dados e envia
+Frontend ->> Backend: envia informações e imagem
+Backend ->> DB: armazena dados e URL da imagem
+DB -->> Backend: confirma gravação
+Backend -->> Frontend: confirmação
+Frontend -->> Proprietário: exibe sucesso
+note over Frontend
+    se offline
+    mantém dados em cache
+    e reenvia quando online
+end note
+@enduml

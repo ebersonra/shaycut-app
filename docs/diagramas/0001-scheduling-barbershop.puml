@@ -1,0 +1,17 @@
+@startuml
+actor Cliente
+participant Frontend
+participant Backend
+database DB as "Supabase"
+Cliente ->> Frontend: seleciona barbearia e horário
+Frontend ->> Backend: solicita agendamento
+Backend ->> DB: grava agendamento
+DB -->> Backend: confirma gravação
+Backend -->> Frontend: confirmação ao cliente
+Frontend -->> Cliente: exibe confirmação
+note over Frontend
+    se offline
+    salva no cache local
+    e reenvia quando online
+end note
+@enduml

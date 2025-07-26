@@ -21,19 +21,5 @@ Se a conexão falhar durante o envio do cadastro, o frontend armazena temporaria
 - O fallback com cache local evita perder dados de cadastro quando a conexão oscila.
 
 ## Diagrama de Sequência
-```mermaid
-sequenceDiagram
-    actor Proprietário
-    participant Frontend
-    participant Backend
-    participant DB as Supabase
-    Proprietário->>Frontend: preenche dados e envia
-    Frontend->>Backend: envia informações e imagem
-    Backend->>DB: armazena dados e URL da imagem
-    DB-->>Backend: confirma gravação
-    Backend-->>Frontend: confirmação
-    Frontend-->>Proprietário: exibe sucesso
-    note over Frontend: se offline
-        mantém dados em cache
-        e reenvia quando online
-```
+
+O diagrama de sequência está disponível em [../diagramas/0003-register-barbershop.puml](../diagramas/0003-register-barbershop.puml).
